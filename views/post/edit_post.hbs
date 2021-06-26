@@ -1,0 +1,17 @@
+<div class="card" style="max-width: 500px;">
+    <div class="card-body">
+        <h2 class="text-center">Edit Post</h2>
+        <hr>
+        <form action="/blog/{{post._id}}/update" method="post">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="title" id="title" class="form-control" value="{{post.title}}">
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Content</label>
+                <textarea name="content" id="content" cols="30" rows="5" class="form-control">{{post.content}}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
